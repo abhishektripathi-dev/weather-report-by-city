@@ -2,7 +2,11 @@
 
 A small, client-side weather lookup app that fetches current weather by city using the OpenWeatherMap API.
 
-**Status:** Ready to run (replace the API key before use)
+**Status:** Live demo deployed on Netlify (see Live Demo below). Replace the API key before publishing code.
+
+**Live Demo**
+
+- Deployed site: https://weather-report-by-city-name.netlify.app/
 
 **Contents:**
 - `index.html` : Main UI and JavaScript for fetching weather data.
@@ -22,7 +26,7 @@ A small, client-side weather lookup app that fetches current weather by city usi
    - Open `index.html` and find the line:
 
 ```js
-const apiKey = "010578fa7181c29a8b098a623382aa6a"
+const apiKey = ""
 ```
 
    - Replace the value with your own API key, for example:
@@ -31,7 +35,7 @@ const apiKey = "010578fa7181c29a8b098a623382aa6a"
 const apiKey = "YOUR_API_KEY_HERE"
 ```
 
-   - Important: Do not commit private API keys to public repositories.
+   - Important: Do not commit private API keys to public repositories. For client-side apps the key is visible in the browser — consider using a server-side proxy if you need to keep the key secret.
 
 3. Run the app locally:
    - The easiest way is to open `index.html` in your browser directly.
@@ -51,6 +55,12 @@ serve . -l 5000
    - Type a city name in the search box and click the search button.
    - The app will show current temperature, humidity, wind speed and a weather icon.
 
+**Deployment (Netlify)**
+
+- Quick deploy: Drag-and-drop the project folder to Netlify Drop (https://app.netlify.com/drop) or connect your GitHub repo and enable continuous deploy.
+- Netlify environment variables: If you want to avoid committing keys, set a variable like `OPENWEATHER_API_KEY` in Netlify's Site settings and use a build step to inject it into the client files. Note: a simple static client will still expose the key to users; to fully protect a key, use a server-side API proxy.
+- Netlify docs: https://docs.netlify.com/
+
 **Files to check**
 - `index.html` — Update `apiKey` and optionally tweak UI text or placeholders.
 - `style.css` — Modify styling.
@@ -64,6 +74,3 @@ serve . -l 5000
 - Feel free to open issues or submit pull requests to improve the UI or add features (e.g., search suggestions, forecasts).
 - This repository does not include a license file. Add one if you intend to open-source it. A common choice is the MIT license.
 
-**Author**
-- Abhishek Tripathi
-# weather-report-by-city
