@@ -22,7 +22,7 @@ A small, client-side weather lookup app that fetches current weather by city usi
    - Open `index.html` and find the line:
 
 ```js
-const apiKey = "010578fa7181c29a8b098a623382aa6a"
+const apiKey = ""
 ```
 
    - Replace the value with your own API key, for example:
